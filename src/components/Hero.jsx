@@ -1,9 +1,16 @@
 import React from 'react';
 import '../styles/Hero.css';
-import backgroundImage from '../assets/background.png'
+import backgroundImage from '../assets/background.png';
 import bannerImage from '../assets/banner.png';
 
 function Hero() {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <section className="hero-container">
       <div className="hero-text">
@@ -16,7 +23,17 @@ function Hero() {
         </p>
         <button className="hero-button">DAFTAR SEKARANG</button>
       </div>
+      {/* <div className="hero-image">
+        <img src={bannerImage} alt="Indotrading Banner" />
+      </div>   */}
+    <div className="scroll-down-wrapper">
+          <div className="scroll-down-btn" onClick={scrollToBottom}>
+          <span className="arrow-down">⌄</span>
+          <p className="btn-text">Lanjut kebawah</p>
+          </div>
+        </div>
     </section>
+
   );
 }
 

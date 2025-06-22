@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src={logoImage} alt="Indotrading Banner" />
+        <img src={logoImage} alt="Indotrading Logo" />
       </div>
       <input type="text" placeholder="Search for items" className="navbar-search" />
       <button className="navbar-search-btn">Search</button>

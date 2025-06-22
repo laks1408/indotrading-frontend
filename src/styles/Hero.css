@@ -5,6 +5,8 @@
   padding: 4rem 6rem;
   flex-wrap: wrap;
   height: 500px;
+  width: auto ;
+  position: relative;
 }
 
 .hero-container::before {
@@ -22,6 +24,7 @@
 .hero-text {
   flex: 1;
   max-width: 600px;
+  margin-bottom: 5rem;
 }
 
 .hero-title {
@@ -52,6 +55,7 @@
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 1rem;
 }
 
 .hero-button:hover {
@@ -64,9 +68,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .hero-image img {
   max-width: 90%;
   height: auto;
+}
+
+.scroll-down-wrapper {
+  align-items: center;
+  text-align: center;
+  margin-top: 4rem;
+  position: absolute; 
+  bottom: 2rem;         
+  left: 50%;            
+  transform: translateX(-50%);
+}
+
+.scroll-down-btn {
+  display: inline-block;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+  transform: translateY(5px);
+}
+
+.arrow-down {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+}
+
+.btn-text {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
 }
