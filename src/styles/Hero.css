@@ -126,6 +126,8 @@
   
   .hero-image {
     flex: 1 1 50%;
+    max-width: 50%;
+    max-height: auto;
     order: 2;
     margin-bottom: 0;
   }

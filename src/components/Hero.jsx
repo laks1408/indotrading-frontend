@@ -25,12 +25,6 @@ function Hero() {
       <div className="hero-image">
         <img src={bannerImage} alt="Indotrading Banner" />
       </div>  
-    <div className="scroll-down-wrapper">
-          <div className="scroll-down-btn" onClick={scrollToBottom}>
-          <span className="arrow-down">⌄</span>
-          <p className="btn-text">Lanjut kebawah</p>
-          </div>
-        </div>
     </section>
 
   );
