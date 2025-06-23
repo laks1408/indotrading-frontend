@@ -6,22 +6,28 @@
   background-color: white;
   border-bottom: 1px solid #ddd;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .navbar-logo img {
   max-height: 50px; 
   width: auto;      
   object-fit: contain;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-search-container {
+  display: flex;
+  flex: 1;
+  min-width: 200px;
 }
 
 .navbar-search {
   flex: 1;
   padding: 0.5rem 1.5rem;
   border: 1px solid #ccc;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-radius: 25px;
   font-size: 0.9rem;
 }
 
@@ -31,15 +37,95 @@
   color: #fff;
   border: none;
   font-weight: bold;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-radius: 25px;
   cursor: pointer;
+  white-space: nowrap;
+}
 
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .navbar-links a {
-  padding: 1rem;
-  margin-left: 1rem;
+  padding: 0.5rem;
+  margin-left: 1.5rem;
   text-decoration: none;
   color: #333;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5rem;
+  }
+  
+  .navbar-logo {
+    order: 1;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-search-container {
+    order: 3;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .navbar-links {
+    order: 2;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 0.5rem 0;
+  }
+  
+  .navbar-links a {
+    margin: 0 0.25rem;
+    padding: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo img {
+    max-height: 40px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  
+  .navbar-search {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .navbar-search-btn {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .navbar-links {
+    font-size: 0.9rem;
+  }
+  
+  .navbar-links a {
+    margin: 0 0.1rem;
+    padding: 0.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .navbar-links a {
+    margin: 0;
+    padding: 0.25rem;
+  }
 }

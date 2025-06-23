@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/Hero.css';
-import backgroundImage from '../assets/background.png';
-import bannerImage from '../assets/banner.png';
+import bannerImage from '../assets/banner2.png';
 
 function Hero() {
   const scrollToBottom = () => {
@@ -23,9 +22,9 @@ function Hero() {
         </p>
         <button className="hero-button">DAFTAR SEKARANG</button>
       </div>
-      {/* <div className="hero-image">
+      <div className="hero-image">
         <img src={bannerImage} alt="Indotrading Banner" />
-      </div>   */}
+      </div>  
     <div className="scroll-down-wrapper">
           <div className="scroll-down-btn" onClick={scrollToBottom}>
           <span className="arrow-down">⌄</span>

@@ -1,22 +1,31 @@
 import React from 'react';
 import '../styles/CategoryGrid.css';
-// Impor gambar-gambar yang diperlukan (gunakan placeholder jika belum ada)
-import alatBeratImage from '../assets/pngtree-tipper-dump-truck-lorry-png-image_10205784.png';
-// ... impor gambar lainnya
-
-// Buat objek yang menghubungkan kategori dengan gambar
-const categoryImages = {
-  "Alat Berat": alatBeratImage
-  // "Alat Elektronik": alatElektronikImage,
-  // ... tambahkan mapping untuk kategori lainnya
-  // Untuk kategori yang belum ada gambarnya, bisa menggunakan gambar default
-};
+import alatBeratImage from '../assets/alatBerat.png';
+import alatElektronikImage from '../assets/alatElektronik.png';
+import alatIndustriImage from '../assets/alatIndustri.png';
+import alatMekanikImage from '../assets/alatMekanik.png';
+import pelindungDiriImage from '../assets/pelindungDiri.png';
+import alatUkurImage from '../assets/alatUkur.png';
+import bahanKimiaImage from '../assets/bahanKimia.png';
+import karetPlastikImage from '../assets/karetDanPlastik.png';
+import konstruksiImage from '../assets/konstruksi.png';
+import lampuImage from '../assets/lampu.png';
+import mesinImage from '../assets/mesin.png';
+import perkakasImage from '../assets/perkakas.png';
 
 const categories = [
-  "Alat Berat", "Alat Elektronik", "Alat Industri",
-  "Alat Mekanik", "Pelindung Diri", "Alat Ukur",
-  "Bahan Kimia", "Karet & Plastik", "Konstruksi",
-  "Lampu", "Mesin", "Perkakas"
+  { name: "Alat Berat", image: alatBeratImage },
+  { name: "Alat Elektronik", image: alatElektronikImage },
+  { name: "Alat Industri", image: alatIndustriImage },
+  { name: "Alat Mekanik", image: alatMekanikImage },
+  { name: "Pelindung Diri", image: pelindungDiriImage },
+  { name: "Alat Ukur", image: alatUkurImage },
+  { name: "Bahan Kimia", image: bahanKimiaImage },
+  { name: "Karet & Plastik", image: karetPlastikImage },
+  { name: "Konstruksi", image: konstruksiImage },
+  { name: "Lampu", image: lampuImage },
+  { name: "Mesin", image: mesinImage },
+  { name: "Perkakas", image: perkakasImage }
 ];
 
 function CategoryGrid() {
@@ -24,16 +33,16 @@ function CategoryGrid() {
     <section className="category-section">
       <h2 className="header-product">Kategori Produk</h2>
       <div className="category-grid">
-        {categories.map((cat, i) => (
-          <div key={i} className="category-card">
-            <div className="category-image-container">
+        {categories.map((category, index) => (
+          <div key={index} className="category-card">
+            <div className="image-container">
               <img 
-                src={categoryImages[cat] || alatBeratImage} // Fallback ke gambar default jika tidak ada
-                alt={cat} 
+                src={category.image} 
+                alt={category.name} 
                 className="category-image"
               />
             </div>
-            <p className="category-name">{cat}</p>
+            <p>{category.name}</p>
           </div>
         ))}
       </div>
